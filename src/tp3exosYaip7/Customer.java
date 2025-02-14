@@ -1,6 +1,6 @@
 package tp3exosYaip7;
 
-public class Customer {
+public class Customer  {
 
 	
 	private String name;
@@ -38,6 +38,7 @@ public class Customer {
 		memberType = Type;
 	}
 	
+	@Override
 	public String toString () {
 		return "Name : "+name+" Member Type : "+memberType;
 	}

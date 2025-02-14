@@ -1,7 +1,7 @@
 package tp3exosYaip6;
 
-public abstract class MovablePoint {
-	private int x,y,xSpeed,ySpeed;
+public class MovablePoint {
+	int x, y,xSpeed,ySpeed;
 	
 	public MovablePoint(int x,int y ,int xSpeed,int ySpeed) {
 		this.x=x;
@@ -9,8 +9,22 @@ public abstract class MovablePoint {
 		this.xSpeed = xSpeed;
 		this.ySpeed = ySpeed;
 	}
+	@Override
 	public String toString() {
-		return "("+x+","+y+") speed ("+xSpeed+","+ySpeed+")";
+		return "MovablePoint [x=" + x + ", y=" + y + ", xSpeed=" + xSpeed + ", ySpeed=" + ySpeed + "]";
+	}
+	
+	public void moveUp() {
+		y -= ySpeed;
+	}
+	public void moveDown() {
+		y += ySpeed;
+	}
+	public void moveLeft() {
+		x -= ySpeed;
+	}
+	public void moveRight() {
+		
 	}
 
 }

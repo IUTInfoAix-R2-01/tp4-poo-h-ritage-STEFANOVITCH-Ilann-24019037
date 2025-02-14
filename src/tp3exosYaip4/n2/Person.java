@@ -30,8 +30,7 @@ public class Person {
         public static void main(String[] args) {
         		Person P = new Person("Hamine","Amza");	
         		System.out.println(P.getAddress());
-        		
-            
+        		System.out.println(P.getAddress());	
         }
     }
 
