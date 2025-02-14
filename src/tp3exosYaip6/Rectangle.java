@@ -18,4 +18,8 @@ public abstract class Rectangle {
 	 public double getPerimeter () {
 		 return 2*length+2*width;
 	 }
+	 
+	 public static void main(String[] args) {
+		 Rectangle r = new Rectangle(11,12);
+	}
 }

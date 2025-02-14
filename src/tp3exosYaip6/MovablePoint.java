@@ -14,17 +14,21 @@ public class MovablePoint {
 		return "MovablePoint [x=" + x + ", y=" + y + ", xSpeed=" + xSpeed + ", ySpeed=" + ySpeed + "]";
 	}
 	
+	
 	public void moveUp() {
 		y -= ySpeed;
 	}
+	
 	public void moveDown() {
 		y += ySpeed;
 	}
+	
 	public void moveLeft() {
-		x -= ySpeed;
+		x -= xSpeed;
 	}
+	
 	public void moveRight() {
-		
+		x += xSpeed;
 	}
 
 }

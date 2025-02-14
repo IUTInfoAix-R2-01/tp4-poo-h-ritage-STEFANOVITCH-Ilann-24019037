@@ -19,5 +19,7 @@ abstract public class Circle implements GeometricObject{
 	public double getPerimeter () {
 		return 2*raduis * 3.14116;
 	}
+	
+
 
 }
