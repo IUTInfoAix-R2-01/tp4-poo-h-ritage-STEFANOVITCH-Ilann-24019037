@@ -36,4 +36,9 @@ public class DiscountRate {
 		return 0.0;//pas de Discount 
 	}
 	
+	public static void main(String[] args) {
+		DiscountRate dis = new DiscountRate();
+		System.out.println(dis.getProductDiscountRate("Gold")); 
+	}
+	
 }
