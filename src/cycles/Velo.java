@@ -29,7 +29,6 @@ public class Velo {
 		this.genAlea = genAlea;
 	}
     
-	@Override
     
     public static double getDEFAUT_BRAQUET() {
 		return DEFAUT_BRAQUET;

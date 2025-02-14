@@ -12,8 +12,5 @@ public class Animal {
         return "Animal: Animal [name=\"" + name + "\"]";
     }
     
-    public static void main(String[] args) {
-        Animal animal = new Animal("Animal");
-        System.out.println(animal.toString());
-    }
+
 }
