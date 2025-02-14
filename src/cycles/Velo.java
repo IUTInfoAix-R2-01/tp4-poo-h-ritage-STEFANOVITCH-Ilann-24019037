@@ -1,15 +1,25 @@
-
+package cycles;
 
 import java.util.Random;
 
 
 public class Velo {
+	
 	private static double DEFAUT_BRAQUET = 13.0;
     private double braquet;
     private double diamRoue;
-    private Random genAlea;
+    private Random genAlea = new Random();
     
-    
+    public Velo(double braquet,double diamRoue) {
+    	this.braquet = braquet;
+    	this.diamRoue = diamRoue;
+    }
+    public Velo(double braquet) {
+    	this.braquet = braquet;
+    }
+    public Velo() {
+    	braquet = DEFAUT_BRAQUET;
+    }
     
     public Random getGenAlea() {
 		return genAlea;
@@ -26,7 +36,7 @@ public class Velo {
 	}
 
 	public static void setDEFAUT_BRAQUET(double dEFAUT_BRAQUET) {
-		DEFAUT_BRAQUET = dEFAUT_BRAQUET;
+		Velo.DEFAUT_BRAQUET = dEFAUT_BRAQUET;
 	}
     
     
@@ -64,32 +74,20 @@ public class Velo {
     }
     
 	
-	
-	
-	
-    
-    
-    
-  
     public static void main(String[] args) {
-        Random random = new Random();
+       Random random = new Random();
 
         Velo veloClassique = new Velo();
         veloClassique.setBraquet(14.0);
-        veloClassique.setDiamRoue(0.7);
+       veloClassique.setDiamRoue(0.7);
         veloClassique.setGenAlea(random);
 
         double puissanceVelo = veloClassique.getPuissance(80); 
-        System.out.println("Vélo Classique : " + veloClassique);
+       System.out.println("Vélo Classique : " + veloClassique);
         System.out.println("Puissance Vélo Classique : " + puissanceVelo);
 
-        VeloElec veloElectrique = new VeloElec(14.0, 0.7, 20.0); 
-        veloElectrique.setGenAlea(random);
-
-        double puissanceVeloElec = veloElectrique.getPuissance(80);
-        System.out.println("\nVélo Électrique : " + veloElectrique);
-        System.out.println("Puissance Vélo Électrique : " + puissanceVeloElec);
-    }
+      
+   }
 
 	
 

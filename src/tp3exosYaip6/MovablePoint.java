@@ -12,6 +12,5 @@ public abstract class MovablePoint {
 	public String toString() {
 		return "("+x+","+y+") speed ("+xSpeed+","+ySpeed+")";
 	}
-	public
 
 }

@@ -1,6 +1,10 @@
 package cycles;
 
+import java.util.Random;
+
 /*class VeloElec */
+
+
 
 public class VeloElec extends Velo {
     private static double DEFAUT_FACTEUR_PUISSANCE_MOTEUR = 15.0;
@@ -8,8 +12,7 @@ public class VeloElec extends Velo {
 
      
     public VeloElec(double braquet, double diamRoue, double coupleMoteur) {
-        super.setBraquet(braquet);
-        super.setDiamRoue(diamRoue);
+        super(braquet,diamRoue);
         this.facteurPuissanceMoteur = coupleMoteur;
     }
 
@@ -47,5 +50,16 @@ public class VeloElec extends Velo {
     public String toString() {
         return "VeloElec [facteurPuissanceMoteur=" + facteurPuissanceMoteur + "]";
     }
+    
+    public static void main(String[] args) {
+    	
+    	Random random = new Random();
+   	 VeloElec veloElectrique = new VeloElec(14.0, 0.7, 20.0); 
+        veloElectrique.setGenAlea(random);
+
+        double puissanceVeloElec = veloElectrique.getPuissance(80);
+         System.out.println("\nVélo Électrique : " + veloElectrique);
+         System.out.println("Puissance Vélo Électrique : " + puissanceVeloElec);
+   }
 }
 
